@@ -1,0 +1,24 @@
+&MODEL
+! number of params in variational ansatz (limited to 20)
+	nParams = 1,
+! Initial values of $nParams parameters
+	pIn(1) = 0.2434579896 
+! number of sites
+	L = 100,
+! number of EQ sweeps within each optimization iteration
+	nEQ = 100000,
+! number of PROD sweeps within each opt. iteration
+	nPROD = 100000,
+! number of opt. cycles
+	nOPT = 1
+! small parameter controlling the optimization convergence
+	opt_eps = 1.0d-4 /
+
+&CORRELATION
+! Max distance
+	maxX = 20 /
+
+&OUTPUTS
+	! Output file for sampled values
+	outf  = "vals.dat",
+	corrf = "corr.dat" /
